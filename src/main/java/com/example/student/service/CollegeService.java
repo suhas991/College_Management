@@ -23,12 +23,13 @@ public class CollegeService {
            return colRepo.save(college);
        }
 
-       public Student createStudent(Long collegeId,Student student){
+       public Student createStudent(long collegeId,Student student){
            College col = colRepo.findById(collegeId).orElseThrow(()->new RuntimeException("College not found"));
            student.setCollege(col);
            col.getStudents().add(student);
+           Student savedStudent = studRepo.save(student);
            colRepo.save(col);
-           return studRepo.save(student);
+           return savedStudent;
        }
 
        public List<College> getALLColleges(){

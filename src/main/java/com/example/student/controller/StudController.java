@@ -24,7 +24,7 @@ public class StudController {
 
     @PostMapping("{id}/students")
     @ResponseStatus(HttpStatus.CREATED)
-    public Student createStudent(@PathVariable Long id,@RequestBody Student stud){
+    public Student createStudent(@PathVariable long id,@RequestBody Student stud){
         return colServ.createStudent(id,stud);
     }
 

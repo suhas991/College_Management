@@ -16,7 +16,7 @@ import java.util.List;
 public class College {
 
     @Id
-    private Long id;
+    private long id;
     private String name;
 
     @OneToMany(mappedBy = "college")

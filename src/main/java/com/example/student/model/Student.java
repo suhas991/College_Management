@@ -14,12 +14,12 @@ import java.util.List;
 public class Student {
 
     @Id
-    private Long id;
+    private long id;
     private String name;
     private String courseTaken;
     private int marks;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private College college;
 
 }
