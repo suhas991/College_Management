@@ -19,7 +19,7 @@ public class Student {
     private String courseTaken;
     private int marks;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private College college;
 
 }
